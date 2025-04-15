@@ -1,6 +1,7 @@
 package lk.ac.iit.bookstore.model;
 
 public class Book {
+    
     private Long id;
     private String title;
     private Long authorId;
@@ -9,11 +10,10 @@ public class Book {
     private double price;
     private int stock;
 
-    // Default Constructor
+    // Constructors
     public Book() {
     }
 
-    // all fields Constructor 
     public Book(Long id, String title, Long authorId, String isbn, int publicationYear, double price, int stock) {
         this.id = id;
         this.title = title;
@@ -25,6 +25,7 @@ public class Book {
     }
 
     // Getters and Setters
+    
     public Long getId() {
         return id;
     }
