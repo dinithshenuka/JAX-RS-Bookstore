@@ -9,7 +9,7 @@ public class Book {
     private double price;
     private int stock;
 
-    // for JSON binding
+    // Default Constructor
     public Book() {
     }
 
