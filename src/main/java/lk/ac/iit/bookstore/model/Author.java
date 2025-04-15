@@ -5,11 +5,10 @@ public class Author {
     private String name;
     private String biography;
 
-    // Default Constructor
+    // Constructors
     public Author() {
     }
 
-    // Constructor with all fields
     public Author(Long id, String name, String biography) {
         this.id = id;
         this.name = name;
