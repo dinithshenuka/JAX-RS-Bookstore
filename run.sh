@@ -3,7 +3,7 @@
 # stop - /Applications/apache-tomcat-11.0.6/bin/shutdown.sh
 
 # Tomcat installation directory 
-TOMCAT_HOME=/Users/iammrdp/apache-tomcat-11.0.6
+TOMCAT_HOME=/Applications/apache-tomcat-11.0.6
 
 # Build the project 
 mvn clean package
@@ -16,10 +16,8 @@ $TOMCAT_HOME/bin/startup.sh
 
 echo ""
 echo "Application deployed!"
-echo "Your application should be available at:"
-echo "http://localhost:8080/bookstore/"
 echo "REST API endpoints available at:"
-echo "http://localhost:8080/bookstore/api/"
+echo "http://localhost:8080/bookstore/"
 echo ""
 echo "Use the following command to stop Tomcat when finished:"
 echo "$TOMCAT_HOME/bin/shutdown.sh"

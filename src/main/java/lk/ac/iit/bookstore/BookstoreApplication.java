@@ -8,7 +8,7 @@ import lk.ac.iit.bookstore.resource.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@ApplicationPath("/api")
+@ApplicationPath("/")
 public class BookstoreApplication extends Application {
     
     @Override
@@ -31,6 +31,7 @@ public class BookstoreApplication extends Application {
         classes.add(InvalidInputExceptionMapper.class);
         classes.add(OutOfStockExceptionMapper.class);
         classes.add(GlobalExceptionMapper.class);
+        classes.add(JsonParseExceptionMapper.class);
         
         return classes;
     }
