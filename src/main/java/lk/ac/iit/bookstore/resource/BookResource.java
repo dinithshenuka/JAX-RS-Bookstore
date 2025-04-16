@@ -7,6 +7,7 @@ import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;
 import lk.ac.iit.bookstore.exception.notfound.AuthorNotFoundException;
 import lk.ac.iit.bookstore.exception.notfound.BookNotFoundException;
+import lk.ac.iit.bookstore.exception.validation.InvalidInputException;
 import lk.ac.iit.bookstore.model.Book;
 import lk.ac.iit.bookstore.repository.AuthorRepository;
 import lk.ac.iit.bookstore.repository.BookRepository;
@@ -32,6 +33,15 @@ public class BookResource {
         // Validate author exists
         if (book.getAuthorId() != null && !authorRepository.existsById(book.getAuthorId())) {
             throw new AuthorNotFoundException(book.getAuthorId());
+        }
+        
+        // Validate price and stock
+        if (book.getPrice() < 0) {
+            throw new InvalidInputException("Book price cannot be negative");
+        }
+        
+        if (book.getStock() < 0) {
+            throw new InvalidInputException("Book stock cannot be negative");
         }
         
         Book createdBook = bookRepository.createBook(book);
@@ -69,6 +79,15 @@ public class BookResource {
         // Validate author exists
         if (book.getAuthorId() != null && !authorRepository.existsById(book.getAuthorId())) {
             throw new AuthorNotFoundException(book.getAuthorId());
+        }
+        
+        // Validate price and stock
+        if (book.getPrice() < 0) {
+            throw new InvalidInputException("Book price cannot be negative");
+        }
+        
+        if (book.getStock() < 0) {
+            throw new InvalidInputException("Book stock cannot be negative");
         }
         
         Book updatedBook = bookRepository.updateBook(id, book);
