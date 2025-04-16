@@ -1,4 +1,4 @@
-package lk.ac.iit.bookstore.exception;
+package lk.ac.iit.bookstore.exception.notfound;
 
 // Exception for when an author is not found
 public class AuthorNotFoundException extends RuntimeException {

@@ -1,4 +1,4 @@
-package lk.ac.iit.bookstore.exception;
+package lk.ac.iit.bookstore.exception.notfound;
 
 // Exception for when a customer is not found
 public class CustomerNotFoundException extends RuntimeException {

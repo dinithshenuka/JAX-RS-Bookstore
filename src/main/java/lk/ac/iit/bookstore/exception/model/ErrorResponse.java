@@ -1,4 +1,4 @@
-package lk.ac.iit.bookstore.exception;
+package lk.ac.iit.bookstore.exception.model;
 
 // Error response model for API errors
 public class ErrorResponse {

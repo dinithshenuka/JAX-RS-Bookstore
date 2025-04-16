@@ -1,4 +1,4 @@
-package lk.ac.iit.bookstore.exception;
+package lk.ac.iit.bookstore.exception.validation;
 
 // Exception for when a book is out of stock
 public class OutOfStockException extends RuntimeException {

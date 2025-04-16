@@ -5,7 +5,7 @@ import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;
-import lk.ac.iit.bookstore.exception.AuthorNotFoundException;
+import lk.ac.iit.bookstore.exception.notfound.AuthorNotFoundException;
 import lk.ac.iit.bookstore.model.Author;
 import lk.ac.iit.bookstore.model.Book;
 import lk.ac.iit.bookstore.repository.AuthorRepository;

@@ -2,7 +2,7 @@ package lk.ac.iit.bookstore;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
-import lk.ac.iit.bookstore.exception.*;
+import lk.ac.iit.bookstore.exception.mapper.*;
 import lk.ac.iit.bookstore.resource.*;
 
 import java.util.HashSet;
@@ -30,6 +30,7 @@ public class BookstoreApplication extends Application {
         classes.add(OrderNotFoundExceptionMapper.class);
         classes.add(InvalidInputExceptionMapper.class);
         classes.add(OutOfStockExceptionMapper.class);
+        classes.add(GlobalExceptionMapper.class);
         
         return classes;
     }

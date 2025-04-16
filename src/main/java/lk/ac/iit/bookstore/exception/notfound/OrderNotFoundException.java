@@ -1,4 +1,4 @@
-package lk.ac.iit.bookstore.exception;
+package lk.ac.iit.bookstore.exception.notfound;
 
 // Exception for when an order is not found
 public class OrderNotFoundException extends RuntimeException {

@@ -5,8 +5,8 @@ import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;
-import lk.ac.iit.bookstore.exception.CustomerNotFoundException;
-import lk.ac.iit.bookstore.exception.InvalidInputException;
+import lk.ac.iit.bookstore.exception.notfound.CustomerNotFoundException;
+import lk.ac.iit.bookstore.exception.validation.InvalidInputException;
 import lk.ac.iit.bookstore.model.Customer;
 import lk.ac.iit.bookstore.repository.CustomerRepository;
 
