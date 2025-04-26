@@ -6,6 +6,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;
 import lk.ac.iit.bookstore.exception.notfound.AuthorNotFoundException;
+import lk.ac.iit.bookstore.exception.validation.InvalidInputException;
 import lk.ac.iit.bookstore.model.Author;
 import lk.ac.iit.bookstore.model.Book;
 import lk.ac.iit.bookstore.repository.AuthorRepository;
@@ -29,6 +30,15 @@ public class AuthorResource {
     // Create a new author
     @POST
     public Response createAuthor(Author author) {
+        
+        if (author == null) {
+            throw new InvalidInputException("Author data cannot be null");
+        }
+        
+        if (author.getName() == null || author.getName().trim().isEmpty()) {
+            throw new InvalidInputException("Author name cannot be empty");
+        }
+        
         Author createdAuthor = authorRepository.createAuthor(author);
         URI uri = uriInfo.getAbsolutePathBuilder().path(String.valueOf(createdAuthor.getId())).build();
         return Response.created(uri).entity(createdAuthor).build();
@@ -55,6 +65,14 @@ public class AuthorResource {
     @PUT
     @Path("/{id}")
     public Author updateAuthor(@PathParam("id") Long id, Author author) {
+        if (author == null) {
+            throw new InvalidInputException("Author data cannot be null");
+        }
+        
+        if (author.getName() == null || author.getName().trim().isEmpty()) {
+            throw new InvalidInputException("Author name cannot be empty");
+        }
+        
         Author updatedAuthor = authorRepository.updateAuthor(id, author);
         if (updatedAuthor == null) {
             throw new AuthorNotFoundException(id);

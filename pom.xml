@@ -44,7 +44,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- HK2 Dependency Injection -->
+    <!-- Jersey hk2 -->
     <dependency>
       <groupId>org.glassfish.jersey.inject</groupId>
       <artifactId>jersey-hk2</artifactId>

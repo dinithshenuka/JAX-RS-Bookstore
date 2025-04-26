@@ -29,9 +29,21 @@ public class BookResource {
     // Create a new book
     @POST
     public Response createBook(Book book) {
+        // Validate required fields
+        if (book == null) {
+            throw new InvalidInputException("Book data cannot be null");
+        }
+        
+        if (book.getTitle() == null || book.getTitle().trim().isEmpty()) {
+            throw new InvalidInputException("Book title cannot be empty");
+        }
+        
+        if (book.getAuthorId() == null) {
+            throw new InvalidInputException("Author ID is required");
+        }
         
         // Validate author exists
-        if (book.getAuthorId() != null && !authorRepository.existsById(book.getAuthorId())) {
+        if (!authorRepository.existsById(book.getAuthorId())) {
             throw new AuthorNotFoundException(book.getAuthorId());
         }
         
@@ -70,14 +82,26 @@ public class BookResource {
     @PUT
     @Path("/{id}")
     public Book updateBook(@PathParam("id") Long id, Book book) {
-       
+        // Validate required fields
+        if (book == null) {
+            throw new InvalidInputException("Book data cannot be null");
+        }
+        
+        if (book.getTitle() == null || book.getTitle().trim().isEmpty()) {
+            throw new InvalidInputException("Book title cannot be empty");
+        }
+        
+        if (book.getAuthorId() == null) {
+            throw new InvalidInputException("Author ID is required");
+        }
+        
         // Check book exists
         if (!bookRepository.existsById(id)) {
             throw new BookNotFoundException(id);
         }
         
         // Validate author exists
-        if (book.getAuthorId() != null && !authorRepository.existsById(book.getAuthorId())) {
+        if (!authorRepository.existsById(book.getAuthorId())) {
             throw new AuthorNotFoundException(book.getAuthorId());
         }
         

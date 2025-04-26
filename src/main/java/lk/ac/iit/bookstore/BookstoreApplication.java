@@ -32,6 +32,7 @@ public class BookstoreApplication extends Application {
         classes.add(OutOfStockExceptionMapper.class);
         classes.add(GlobalExceptionMapper.class);
         classes.add(JsonParseExceptionMapper.class);
+        classes.add(JsonbExceptionMapper.class);
         
         return classes;
     }
