@@ -103,7 +103,7 @@ public class RootResource {
                 "</head>\n" +
                 "<body>\n" +
                 "    <h1>Welcome to JAX-RS Bookstore API</h1>\n" +
-                "    <p>This is a RESTful API for a bookstore application built with JAX-RS and Java EE 8.</p>\n" +
+                "    <p>This is a RESTful API for a bookstore application built with JAX-RS </p>\n" +
                 "    \n" +
                 "    <h2>Available Endpoints</h2>\n" +
                 "    \n" +
