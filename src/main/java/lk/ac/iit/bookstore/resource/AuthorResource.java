@@ -68,6 +68,10 @@ public class AuthorResource {
         if (author == null) {
             throw new InvalidInputException("Author data cannot be null");
         }
+
+        if (author.getName() == null || author.getName().trim().isEmpty()) {
+            throw new InvalidInputException("Author name cannot be empty");
+        }
         
         Author updatedAuthor = authorRepository.updateAuthor(id, author);
         if (updatedAuthor == null) {
