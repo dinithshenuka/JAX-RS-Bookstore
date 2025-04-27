@@ -1,11 +1,11 @@
 package lk.ac.iit.bookstore.exception.mapper;
 
-import jakarta.json.bind.JsonbException;
-import jakarta.ws.rs.ProcessingException;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
-import jakarta.ws.rs.ext.ExceptionMapper;
-import jakarta.ws.rs.ext.Provider;
+import javax.json.bind.JsonbException;
+import javax.ws.rs.ProcessingException;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.ext.ExceptionMapper;
+import javax.ws.rs.ext.Provider;
 import lk.ac.iit.bookstore.exception.model.ErrorResponse;
 
 // Maps JSON parsing exceptions to HTTP 400 Bad Request response

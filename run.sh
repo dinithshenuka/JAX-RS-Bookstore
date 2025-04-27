@@ -1,9 +1,9 @@
 # Easy Run Script for JAX-RS-Bookstore
 # run - ./run.sh
-# stop - /Applications/apache-tomcat-11.0.6/bin/shutdown.sh
+# stop - /Applications/apache-tomcat-9.0.100/bin/shutdown.sh
 
 # Tomcat installation directory 
-TOMCAT_HOME=/Applications/apache-tomcat-11.0.6
+TOMCAT_HOME=/Applications/apache-tomcat-9.0.100
 
 # Build the project 
 mvn clean package

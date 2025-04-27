@@ -1,8 +1,8 @@
 package lk.ac.iit.bookstore.resource;
 
-import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import lk.ac.iit.bookstore.exception.notfound.BookNotFoundException;
 import lk.ac.iit.bookstore.exception.notfound.CartNotFoundException;
 import lk.ac.iit.bookstore.exception.notfound.CustomerNotFoundException;
