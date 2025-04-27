@@ -16,6 +16,7 @@ public class BookstoreApplication extends Application {
         Set<Class<?>> classes = new HashSet<>();
         
         // Resources
+        classes.add(RootResource.class);
         classes.add(BookResource.class);
         classes.add(AuthorResource.class);
         classes.add(CustomerResource.class);
